@@ -48,12 +48,16 @@ def part2(_input_):
 import unittest
 import utils
 
+
 class TestCase(unittest.TestCase):
     def test_part1(self):
-        self.assertEqual(part1(utils.read("inputs/day1.txt")), 52974)
+        self.assertEqual(142, part1(utils.read("inputs/day1.p1.txt")))
+        self.assertEqual(52974, part1(utils.read("inputs/day1.txt")))
 
     def test_part2(self):
-        self.assertEqual(part2(utils.read("inputs/day1.txt")), 53340)
+        self.assertEqual(281, part2(utils.read("inputs/day1.p2.txt")))
+        self.assertEqual(53340, part2(utils.read("inputs/day1.txt")))
+
 
 if __name__ == '__main__':
     unittest.main()
