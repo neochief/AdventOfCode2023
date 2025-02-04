@@ -1,6 +1,3 @@
-from utils import read
-
-
 def part1(_input_):
     lines = _input_.splitlines()
     result = 0
@@ -33,7 +30,8 @@ def part2(_input_):
                 last = char
             else:
                 for i, numberStr in enumerate(numberStrings):
-                    if index + len(numberStr) <= len(line) and line[index:index + len(numberStr)] == numberStr:
+                    if (index + len(numberStr) <= len(line) and
+                            line[index:index + len(numberStr)] == numberStr):
                         if first is None:
                             first = str(i + 1)
                         last = str(i + 1)
@@ -43,3 +41,19 @@ def part2(_input_):
             result += int(first + last)
 
     return result
+
+
+################################################################################
+
+import unittest
+import utils
+
+class TestCase(unittest.TestCase):
+    def test_part1(self):
+        self.assertEqual(part1(utils.read("inputs/day1.txt")), 52974)
+
+    def test_part2(self):
+        self.assertEqual(part2(utils.read("inputs/day1.txt")), 53340)
+
+if __name__ == '__main__':
+    unittest.main()
