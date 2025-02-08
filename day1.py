@@ -51,12 +51,12 @@ import utils
 
 class TestCase(unittest.TestCase):
     def test_part1(self):
-        self.assertEqual(142, part1(utils.read("inputs/day1.p1.txt")))
-        self.assertEqual(52974, part1(utils.read("inputs/day1.txt")))
+        self.assertEqual(142, part1(utils.read("inputs/day1.p1.txt")), "Fails on the example input")
+        self.assertEqual(52974, part1(utils.read("inputs/day1.txt")), "Fails on the real input")
 
     def test_part2(self):
-        self.assertEqual(281, part2(utils.read("inputs/day1.p2.txt")))
-        self.assertEqual(53340, part2(utils.read("inputs/day1.txt")))
+        self.assertEqual(281, part2(utils.read("inputs/day1.p2.txt")), "Fails on the example input")
+        self.assertEqual(53340, part2(utils.read("inputs/day1.txt")), "Fails on the real input")
 
 
 if __name__ == '__main__':
